@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from 'dotenv'
 import Connection from "./src/BD/Mongo.js";
 import userRoutes from "./src/routes/routerBooks.js";
+import cors from 'cors';
 
 const app = express();
 const Port = 8080
@@ -9,6 +10,7 @@ const Port = 8080
 dotenv.config();
 
 app.use(express.json());
+app.use(cors());
 
 app.use("/", userRoutes);
 

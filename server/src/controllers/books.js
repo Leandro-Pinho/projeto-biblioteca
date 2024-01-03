@@ -1,7 +1,7 @@
 
 import BookModel from '../schema/bookSchema.js'
 
-// get all public parties
+// get all books
 export const getBooks = async (req, res) => {
     try {
         const books = await BookModel.find({}).sort([['_id', -1]]);
@@ -11,6 +11,8 @@ export const getBooks = async (req, res) => {
     }
 };
 
+
+// post para criar livros
 export const createBook = async (req, res) => {
     try {
         if (req.body.titulo === '' || req.body.num_paginas === '' || req.body.isbn === '' || req.body.editora === '') {
@@ -23,7 +25,7 @@ export const createBook = async (req, res) => {
             isbn: req.body.isbn,
             editora: req.body.editora,
         });
-    
+
         return res.status(201).json({ message: "Livro criado com sucesso" });
     } catch (error) {
         return res.status(400).json({ error });
