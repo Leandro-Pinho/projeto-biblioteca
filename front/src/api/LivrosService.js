@@ -8,11 +8,11 @@ export class LivrosService {
     }
 
     static getLivro(id) {
-        return axios.get(`${BASE_URL}/book/${id}`);
+        return axios.get(`${BASE_URL}/books/${id}`);
     }
 
     static createLivro(body) {
-        return axios.post(`${BASE_URL}/livros`, body);
+        return axios.post(`${BASE_URL}/book`, body);
     }
 
     static updateLivro(id, body) {
