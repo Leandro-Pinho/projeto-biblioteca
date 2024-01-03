@@ -8,7 +8,7 @@ export class LivrosService {
     }
 
     static getLivro(id) {
-        return axios.get(`${BASE_URL}/books/${id}`);
+        return axios.get(`${BASE_URL}/book/${id}`);
     }
 
     static createLivro(body) {
@@ -16,7 +16,7 @@ export class LivrosService {
     }
 
     static updateLivro(id, body) {
-        return axios.put(`${BASE_URL}/livros/${id}`, body);
+        return axios.put(`${BASE_URL}/book/${id}`, body);
     }
 
     static deleteLivro(id) {

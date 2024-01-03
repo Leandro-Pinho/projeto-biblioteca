@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import Header from '../../components/Header/Header'
-import SubmenuLivros from '../../components/SubmenuLivros/SubmenuLivros'
 import { LivrosService } from '../../api/LivrosService'
+import { useNavigate } from 'react-router-dom'
 import "./index.scss"
 
+
 const LivrosCadastro = () => {
+  const navigate = useNavigate();
 
   const [livro, setLivro] = useState([])
 
@@ -30,12 +32,13 @@ const LivrosCadastro = () => {
         });
     }
 
+    navigate('/livros')
   }
 
   return (
     <>
       <Header />
-      
+
       <div className='livrosCadastro'>
         <h1>Cadastro de Livros</h1>
         <div>
