@@ -31,3 +31,15 @@ export const createBook = async (req, res) => {
         return res.status(400).json({ error });
     }
 };
+
+// delete para deletar os livros
+export const deleteBook = async (req, res) => {
+    try {
+        const id = req.params.id
+        // console.log(id)
+        const data = await BookModel.deleteOne({ _id: id })
+        return res.status(201).json({ message: "Livro deletado com sucesso" });
+    } catch (error) {
+        return res.status(400).json({ error });
+    }
+}

@@ -20,7 +20,7 @@ export class LivrosService {
     }
 
     static deleteLivro(id) {
-        return axios.delete(`${BASE_URL}/livros/${id}`);
+        return axios.delete(`${BASE_URL}/book/${id}`);
     }
 
 }

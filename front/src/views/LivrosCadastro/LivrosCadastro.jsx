@@ -35,7 +35,7 @@ const LivrosCadastro = () => {
   return (
     <>
       <Header />
-      <SubmenuLivros />
+      
       <div className='livrosCadastro'>
         <h1>Cadastro de Livros</h1>
         <div>
