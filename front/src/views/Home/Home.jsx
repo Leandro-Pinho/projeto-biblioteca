@@ -25,12 +25,18 @@ const Home = () => {
     <div className='home'>
       <Header />
       <h1>Biblioteca Central Online - Livros</h1>
-      {livros.map(livro => {
-        return (
-          livro.titulo
-        )
-      })
-      }
+      {/* <div className='livros'>
+        <ul>
+          {livros.map((livro) => (
+            <li key={livro._id}>
+              <h4>Livro: <span>{livro.titulo}</span></h4>
+              <h5>Editora: <span> {livro.editora}</span></h5>
+              <h5>Nun_paginas: <span> {livro.num_paginas}</span></h5>
+
+            </li>
+          ))}
+        </ul>
+      </div> */}
     </div>
   )
 }

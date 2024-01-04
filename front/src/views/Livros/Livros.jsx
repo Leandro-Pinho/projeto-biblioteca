@@ -42,8 +42,8 @@ const Livros = () => {
         <ul>
           {livros.map((livro) => (
             <li key={livro._id}>
-              {livro.titulo}
-              <span>{livro.editora}</span>
+              <h4>Livro: <span>{livro.titulo}</span></h4>
+              <h5>Editora: <span> {livro.editora}</span></h5>
               <div className='botoes'>
                 <div>
                   <Link className='btn edit' to={`/livros/edicao/${livro._id}`}>
